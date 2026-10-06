@@ -4,7 +4,8 @@ Sitio estático (HTML + CSS + JS, sin dependencias ni build) listo para GitHub y
 
 ```
 index.html      Home (una sola página)
-gracias.html    Página de confirmación del formulario
+portafolio.html Página de portafolio con filtros
+portfolio-data.js  Lista de proyectos (aquí se agregan webs nuevas)
 styles.css      Estilos, animaciones y responsive
 main.js         Menú móvil, animaciones al hacer scroll, contadores, parallax
 netlify.toml    Configuración de Netlify (headers y caché)
@@ -32,13 +33,15 @@ git push -u origin main
 3. Build command: *(vacío)* · Publish directory: `.`
 4. **Deploy**. Cada `git push` a `main` vuelve a publicar solo.
 
-## 3. Recibir el formulario en tu correo
+## 3. Formulario → correo
 
-El formulario usa **Netlify Forms** (gratis hasta 100 envíos/mes).
+El formulario envía los mensajes con **FormSubmit** directamente desde el código (`main.js`), sin configurar nada en Netlify.
 
-1. Después del primer deploy, en Netlify ve a **Site configuration → Forms** y haz clic en **Enable form detection**. Luego vuelve a hacer deploy (Deploys → Trigger deploy).
-2. En **Forms → Form notifications → Add notification → Email notification**, elige el formulario `contacto` y pon `hola@danielatiradostudio.com`.
-3. Haz un envío de prueba desde el sitio publicado. Los mensajes también quedan guardados en la pestaña **Forms**. Los envíos marcados como spam van a **Forms → Spam**.
+1. Publica el sitio y envía un mensaje de prueba desde el formulario.
+2. Llega un correo de **FormSubmit** a `hola@danielatiradostudio.com` pidiendo activar el formulario: haz clic en **Activate Form** (solo la primera vez).
+3. Desde ahí, cada envío llega a ese correo con asunto "Nuevo contacto web: …". Al darle *Responder* le contestas directo al cliente.
+
+Si quieres recibirlo en otro correo, cambia `CORREO_DESTINO` al inicio de `main.js`. Revisa la carpeta de spam la primera vez.
 
 ## 4. Conectar tu dominio
 
@@ -47,13 +50,13 @@ El formulario usa **Netlify Forms** (gratis hasta 100 envíos/mes).
 ## Editar contenido
 
 - Textos: `index.html`.
-- Colores: variables al inicio de `styles.css` (`--dark`, `--purple`, `--pink`…).
-- Nuevo proyecto: copia un bloque `<a class="project">` en `index.html` y agrega su imagen en `assets/`.
-- Redes: busca `Instagram` y `LinkedIn` en el footer de `index.html` y reemplaza el `href="#"`.
+- Colores: variables al inicio de `styles.css` (`--morado-profundo`, `--morado`, `--rosa`…).
+- Nuevo proyecto: agrega un bloque en `portfolio-data.js` y su captura en `assets/portafolio/` (webp, 1200 px). Con `destacado: true` también aparece en el home.
+- Redes: busca `Instagram` y `LinkedIn` en el footer de `index.html` y `portafolio.html` y reemplaza el `href="#"`.
 
 ## Probar en local
 
 ```bash
 python3 -m http.server 8080
 ```
-Abre http://localhost:8080 (el formulario solo funciona ya publicado en Netlify).
+Abre http://localhost:8080 (el formulario también funciona en local).

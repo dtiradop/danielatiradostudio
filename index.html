@@ -12,7 +12,7 @@
 <link rel="icon" href="/assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Source+Code+Pro:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"ProfessionalService","name":"Daniela Tirado Studio","email":"hola@danielatiradostudio.com","telephone":"+57 322 625 8475","address":{"@type":"PostalAddress","addressLocality":"Cali","addressCountry":"CO"},"areaServed":["CO","MX","ES","US"]}
@@ -20,16 +20,27 @@
 </head>
 <body>
 
+<!-- Íconos (trazo lineal uniforme) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35m-5.42 7.4h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89a11.82 11.82 0 0 0-3.48-8.41Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5a7 7 0 0 0-14 0C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16v.01"/></symbol>
+</svg>
+
 <header class="nav" id="top">
   <div class="container nav__inner">
-    <a href="#top" class="nav__logo" aria-label="Daniela Tirado Studio, inicio"><img src="/assets/logo.svg" alt="Daniela Tirado Studio" width="130" height="52"></a>
+    <a href="/" class="nav__logo" aria-label="Daniela Tirado Studio, inicio"><img src="/assets/logo.svg" alt="Daniela Tirado Studio" width="120" height="48"></a>
     <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
-    <nav class="nav__menu" id="menu">
-      <a href="#servicios">[01] servicios</a>
-      <a href="#proyectos">[02] proyectos</a>
-      <a href="#estudio">[03] estudio</a>
-      <a href="#proceso">[04] proceso</a>
-      <a href="#contacto" class="btn btn--dark">Hablemos de tu proyecto</a>
+    <nav class="nav__menu" id="menu" aria-label="Principal">
+      <a href="/#servicios"><b>[01]</b> servicios</a>
+      <a href="/portafolio.html"><b>[02]</b> portafolio</a>
+      <a href="/#estudio"><b>[03]</b> estudio</a>
+      <a href="/#proceso"><b>[04]</b> proceso</a>
+      <a href="/#contacto" class="btn btn--primary btn--sm">Hablemos de tu proyecto</a>
     </nav>
   </div>
 </header>
@@ -37,170 +48,168 @@
 <main>
 <section class="hero container">
   <div class="hero__text">
-    <p class="mono accent reveal">&lt;estudio de desarrollo web &amp; ecommerce /&gt;</p>
-    <h1 class="reveal" style="--d:.1s">Webs que se ven bien<br>y <span class="accent typed">venden mejor.</span></h1>
+    <p class="eyebrow reveal">&lt;estudio de desarrollo web &amp; ecommerce /&gt;</p>
+    <h1 class="display reveal" style="--d:.1s">Webs que se ven bien y <strong class="kw">venden mejor.</strong><span class="caret" aria-hidden="true"></span></h1>
     <p class="lead reveal" style="--d:.2s">Diseñamos y desarrollamos tiendas en Shopify y sitios en WordPress donde diseño, tecnología y marketing trabajan juntos para que tu marca venda, comunique y crezca.</p>
     <div class="hero__ctas reveal" style="--d:.3s">
-      <a href="#contacto" class="btn btn--primary">Cotiza tu proyecto →</a>
-      <a href="#proyectos" class="btn btn--outline">Ver proyectos</a>
+      <a href="#contacto" class="btn btn--primary">Cotiza tu proyecto <span class="arrow">→</span></a>
+      <a href="/portafolio.html" class="btn btn--secondary">Ver portafolio</a>
     </div>
     <div class="stats reveal" style="--d:.4s">
-      <div><strong class="mono" data-count="5" data-prefix="+">+5</strong><span>años en WordPress y Shopify</span></div>
-      <div><strong class="mono" data-count="4">4</strong><span>países: Colombia, México, España y EE. UU.</span></div>
-      <div><strong class="mono">Shopify</strong><span>Partner oficial</span></div>
+      <div class="stat"><strong data-count="5" data-prefix="+">+5</strong><span>años en WordPress y Shopify</span></div>
+      <div class="stat stat--soft"><strong data-count="4">4</strong><span>países con clientes</span></div>
+      <div class="stat stat--soft"><strong>Shopify</strong><span>Partner oficial</span></div>
     </div>
   </div>
-  <div class="hero__art">
+  <div class="hero__art" aria-hidden="true">
     <div class="hero__blob"></div>
-    <img class="hero__portrait" src="/assets/retrato.webp" alt="Ilustración de Daniela Tirado" width="480" height="480">
+    <img class="hero__portrait" src="/assets/retrato.webp" alt="" width="480" height="480">
     <img class="hero__cursor" src="/assets/cursor.webp" alt="" width="220" height="230">
-    <div class="hero__chip mono"><span class="accent">{ conversión: <b>on</b> }</span><br>diseño + código + estrategia</div>
+    <div class="hero__chip"><b>{ conversión: on }</b><br>diseño + código + estrategia</div>
   </div>
 </section>
 
 <div class="marquee" aria-hidden="true">
-  <div class="marquee__track mono">
-    <span>Shopify</span><i>&lt;/&gt;</i><span>WordPress</span><i>{ }</i><span>WooCommerce</span><i>#</i><span>Landing pages</span><i>@</i><span>SEO técnico</span><i>&amp;</i><span>Automatizaciones</span><i>;</i><span>CRO</span><i>&lt;/&gt;</i>
-    <span>Shopify</span><i>&lt;/&gt;</i><span>WordPress</span><i>{ }</i><span>WooCommerce</span><i>#</i><span>Landing pages</span><i>@</i><span>SEO técnico</span><i>&amp;</i><span>Automatizaciones</span><i>;</i><span>CRO</span><i>&lt;/&gt;</i>
+  <div class="marquee__track">
+    <span>Shopify</span><i>&lt;/&gt;</i><span>WordPress</span><i>{ }</i><span>WooCommerce</span><i>#</i><span>Landing pages</span><i>@</i><span>SEO técnico</span><i>;</i><span>Automatizaciones</span><i>&lt;/&gt;</i><span>CRO</span><i>{ }</i>
+    <span>Shopify</span><i>&lt;/&gt;</i><span>WordPress</span><i>{ }</i><span>WooCommerce</span><i>#</i><span>Landing pages</span><i>@</i><span>SEO técnico</span><i>;</i><span>Automatizaciones</span><i>&lt;/&gt;</i><span>CRO</span><i>{ }</i>
   </div>
 </div>
 
-<section id="servicios" class="section container">
-  <div class="section__head split">
-    <div>
-      <p class="mono accent reveal">[01] servicios</p>
-      <h2 class="reveal">Todo lo que tu marca necesita para vender en internet.</h2>
-    </div>
-    <p class="lead reveal">No hacemos páginas bonitas y ya: construimos herramientas digitales claras, navegables y pensadas para la conversión.</p>
-  </div>
-  <div class="grid grid--3">
-    <article class="card reveal"><span class="card__icon mono">&lt;/&gt;</span><h3>Ecommerce en Shopify</h3><p>Tiendas a medida con Liquid, temas personalizados y secciones propias, listas para escalar.</p></article>
-    <article class="card reveal" style="--d:.08s"><span class="card__icon mono">{ }</span><h3>Sitios en WordPress</h3><p>Webs corporativas y tiendas WooCommerce con Elementor, plugins y funcionalidades a medida.</p></article>
-    <article class="card reveal" style="--d:.16s"><span class="card__icon mono">#</span><h3>Landing pages</h3><p>Páginas de campaña enfocadas en captar leads y convertir tráfico de Meta y Google Ads.</p></article>
-    <article class="card reveal"><span class="card__icon mono">@</span><h3>SEO y optimización</h3><p>SEO técnico, velocidad y CRO para que te encuentren y compren con menos fricción.</p></article>
-    <article class="card reveal" style="--d:.08s"><span class="card__icon mono">&amp;</span><h3>Automatizaciones</h3><p>Shopify Flow, Klaviyo, integraciones API y Siigo + Shopify para ahorrar horas de operación.</p></article>
-    <article class="card card--dark reveal" style="--d:.16s"><span class="card__icon mono">;</span><h3>Marketing digital</h3><p>Meta Ads, embudos de venta, estrategias de lanzamiento y post-venta con métricas claras.</p></article>
-  </div>
-</section>
-
-<section id="proyectos" class="section section--white">
+<section id="servicios" class="section">
   <div class="container">
-    <div class="section__head">
-      <p class="mono accent reveal">[02] proyectos</p>
-      <h2 class="reveal">Marcas que ya venden con nosotras.</h2>
-    </div>
-    <div class="grid grid--2">
-      <a class="project reveal" href="https://thebrightclub.es/" target="_blank" rel="noopener">
-        <div class="project__img"><img src="/assets/bright.webp" alt="Sitio web de The Bright Club" loading="lazy" width="1200" height="655"></div>
-        <div class="project__meta"><h3>The Bright Club</h3><span class="mono">España · Joyería</span></div>
-        <p>Alta joyería con diamantes de laboratorio en oro de 18k, Madrid.</p>
-      </a>
-      <a class="project reveal" style="--d:.1s" href="https://diamantedelaboratorio.com/" target="_blank" rel="noopener">
-        <div class="project__img"><img src="/assets/ddl.webp" alt="Sitio web de Diamante de Laboratorio" loading="lazy" width="1200" height="655"></div>
-        <div class="project__meta"><h3>Diamante de Laboratorio</h3><span class="mono">España · Joyería</span></div>
-        <p>Diamantes de laboratorio certificados IGI y GIA.</p>
-      </a>
-      <a class="project reveal" href="https://www.zilvina.com/es" target="_blank" rel="noopener">
-        <div class="project__img"><img src="/assets/zilvina.webp" alt="Sitio web de Zilvina" loading="lazy" width="1200" height="655"></div>
-        <div class="project__meta"><h3>Zilvina</h3><span class="mono">EE. UU. · Moda</span></div>
-        <p>Moda femenina con alma hispana, nacida en Estados Unidos.</p>
-      </a>
-      <a class="project reveal" style="--d:.1s" href="https://maisondelafuente.com/" target="_blank" rel="noopener">
-        <div class="project__img"><img src="/assets/dlf.webp" alt="Sitio web de De La Fuente" loading="lazy" width="1200" height="655"></div>
-        <div class="project__meta"><h3>Maison De La Fuente</h3><span class="mono">Colombia · Hogar</span></div>
-        <p>Velas aromáticas y perfumes para el hogar.</p>
-      </a>
-    </div>
-    <a class="project project--wide reveal" href="https://www.pielcoreana.com/" target="_blank" rel="noopener">
-      <div class="project__img"><img src="/assets/piel.webp" alt="Sitio web de Piel Coreana" loading="lazy" width="1200" height="655"></div>
-      <div class="project__body">
-        <span class="mono accent">México · Skincare</span>
-        <h3>Piel Coreana</h3>
-        <p>Ecommerce de skincare y maquillaje coreano, con venta al detal y mayoreo.</p>
-        <span class="link">Visitar sitio →</span>
+    <div class="section__head split">
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <p class="marker reveal"><b>[01]</b><span>servicios</span></p>
+        <h2 class="reveal">Todo lo que tu marca necesita para <strong>vender en internet.</strong></h2>
       </div>
-    </a>
-  </div>
-</section>
-
-<section id="estudio" class="section container about">
-  <div class="about__side reveal">
-    <img src="/assets/retrato-dark.webp" alt="Daniela Tirado" width="360" height="360" loading="lazy" class="spin-slow">
-    <p class="mono muted">Ingeniera Multimedia · Esp. en Gerencia de la Productividad e Innovación · UX/UI · Marketing Digital · Docente UAO</p>
-  </div>
-  <div class="about__main">
-    <p class="mono accent reveal">[03] el estudio</p>
-    <h2 class="reveal">No solo desarrollo sitios web. Construyo ecosistemas digitales para vender, escalar y optimizar.</h2>
-    <p class="lead reveal">Soy Daniela Tirado. Desde 2019 he pasado por agencias, marcas DTC y empresas de producto como Dropi, Acsendo y Dermaly. Hoy lidero un equipo de cuatro personas que acompaña a marcas y emprendedores con una mirada híbrida: diseño, tecnología y lógica comercial en el mismo lugar.</p>
-    <div class="values">
-      <div class="reveal"><strong>Profesional</strong><span>Criterio y capacidad de ejecución.</span></div>
-      <div class="reveal" style="--d:.08s"><strong>Cercana</strong><span>Te acompaño, no te dejo con un link.</span></div>
-      <div class="reveal" style="--d:.16s"><strong>Creativa</strong><span>Diseño con personalidad de marca.</span></div>
-      <div class="reveal" style="--d:.24s"><strong>Innovadora</strong><span>Automatización y datos a tu favor.</span></div>
+      <p class="lead reveal">No hacemos páginas bonitas y ya: construimos herramientas digitales claras, navegables y pensadas para la conversión.</p>
+    </div>
+    <div class="grid grid--3">
+      <article class="card reveal"><span class="card__glyph">&lt;/&gt;</span><h3>Ecommerce en Shopify</h3><p>Tiendas a medida con Liquid, temas personalizados y secciones propias, listas para escalar.</p></article>
+      <article class="card reveal" style="--d:.08s"><span class="card__glyph">{ }</span><h3>Sitios en WordPress</h3><p>Webs corporativas y tiendas WooCommerce con Elementor, plugins y funcionalidades a medida.</p></article>
+      <article class="card reveal" style="--d:.16s"><span class="card__glyph">#</span><h3>Landing pages</h3><p>Páginas de campaña enfocadas en captar leads y convertir tráfico de Meta y Google Ads.</p></article>
+      <article class="card reveal"><span class="card__glyph">@</span><h3>SEO y optimización</h3><p>SEO técnico, velocidad y CRO para que te encuentren y compren con menos fricción.</p></article>
+      <article class="card reveal" style="--d:.08s"><span class="card__glyph">;</span><h3>Automatizaciones</h3><p>Shopify Flow, Klaviyo, integraciones API y Siigo + Shopify para ahorrar horas de operación.</p></article>
+      <article class="card card--dark reveal" style="--d:.16s"><span class="card__glyph">&lt;/&gt;</span><h3>Marketing digital</h3><p>Meta Ads, embudos de venta, estrategias de lanzamiento y post-venta con métricas claras.</p></article>
     </div>
   </div>
 </section>
 
-<section id="proceso" class="section section--dark">
+<section id="proyectos" class="section section--soft">
+  <div class="container">
+    <div class="section__head split">
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <p class="marker reveal"><b>[02]</b><span>proyectos</span></p>
+        <h2 class="reveal">Marcas que ya <strong>venden con nosotras.</strong></h2>
+      </div>
+      <a href="/portafolio.html" class="btn btn--secondary reveal">Ver todo el portafolio <span class="arrow">→</span></a>
+    </div>
+    <div class="grid grid--2" id="featured" data-portfolio="featured"></div>
+  </div>
+</section>
+
+<section id="estudio" class="section">
+  <div class="container about">
+    <div class="about__side reveal">
+      <img src="/assets/retrato-dark.webp" alt="Ilustración de Daniela Tirado" width="340" height="340" loading="lazy" class="float">
+      <p class="small mono">Ingeniera Multimedia · Esp. en Gerencia de la Productividad e Innovación · UX/UI · Marketing Digital · Docente UAO</p>
+    </div>
+    <div class="about__main">
+      <p class="marker reveal"><b>[03]</b><span>el estudio</span></p>
+      <h2 class="reveal">No solo desarrollo sitios web. Construyo <strong>ecosistemas digitales</strong> para vender, escalar y optimizar.</h2>
+      <p class="lead reveal">Soy Daniela Tirado. Desde 2019 he pasado por agencias, marcas DTC y empresas de producto como Dropi, Acsendo y Dermaly. Hoy lidero un equipo de cuatro personas que acompaña a marcas y emprendedores con una mirada híbrida: diseño, tecnología y lógica comercial en el mismo lugar.</p>
+      <div class="values">
+        <div class="reveal"><strong>Profesional</strong><span>Criterio y capacidad de ejecución.</span></div>
+        <div class="reveal" style="--d:.08s"><strong>Cercana</strong><span>Te acompaño, no te dejo con un link.</span></div>
+        <div class="reveal" style="--d:.16s"><strong>Creativa</strong><span>Diseño con personalidad de marca.</span></div>
+        <div class="reveal" style="--d:.24s"><strong>Innovadora</strong><span>Automatización y datos a tu favor.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="proceso" class="section section--dark on-dark">
   <div class="container">
     <div class="section__head">
-      <p class="mono pink reveal">[04] proceso</p>
-      <h2 class="reveal">Así trabajamos contigo.</h2>
+      <p class="marker reveal"><b>[04]</b><span>proceso</span></p>
+      <h2 class="reveal">Así trabajamos <strong>contigo.</strong></h2>
     </div>
     <ol class="steps">
-      <li class="reveal"><span class="mono">01</span><h3>Diagnóstico</h3><p>Entendemos tu negocio, tu cliente y tus objetivos comerciales.</p></li>
-      <li class="reveal" style="--d:.1s"><span class="mono">02</span><h3>Estrategia y diseño</h3><p>Arquitectura, wireframes y diseño UI pensados para convertir.</p></li>
-      <li class="reveal" style="--d:.2s"><span class="mono">03</span><h3>Desarrollo</h3><p>Código limpio en Shopify o WordPress, rápido y fácil de administrar.</p></li>
-      <li class="reveal" style="--d:.3s"><span class="mono">04</span><h3>Lanzamiento y crecimiento</h3><p>Publicamos, medimos y optimizamos con SEO, CRO y automatización.</p></li>
+      <li class="reveal"><span class="num">01</span><h3>Diagnóstico</h3><p>Entendemos tu negocio, tu cliente y tus objetivos comerciales.</p></li>
+      <li class="reveal" style="--d:.1s"><span class="num">02</span><h3>Estrategia y diseño</h3><p>Arquitectura, wireframes y diseño UI pensados para convertir.</p></li>
+      <li class="reveal" style="--d:.2s"><span class="num">03</span><h3>Desarrollo</h3><p>Código limpio en Shopify o WordPress, rápido y fácil de administrar.</p></li>
+      <li class="reveal" style="--d:.3s"><span class="num">04</span><h3>Lanzamiento</h3><p>Publicamos, medimos y optimizamos con SEO, CRO y automatización.</p></li>
     </ol>
   </div>
 </section>
 
-<section id="contacto" class="section container contact">
-  <div class="contact__info">
-    <p class="mono accent reveal">[05] contacto</p>
-    <h2 class="reveal">¿Lista tu marca para su <span class="accent">próximo click</span>?</h2>
-    <p class="lead reveal">Cuéntanos qué necesitas y te respondemos con una propuesta clara, sin tecnicismos.</p>
-    <ul class="contact__list reveal">
-      <li><a href="https://wa.me/573226258475" target="_blank" rel="noopener"><span class="ico ico--purple"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.5A8.4 8.4 0 1 1 21 11.5z"/></svg></span>+57 322 625 8475</a></li>
-      <li><a href="mailto:hola@danielatiradostudio.com"><span class="ico ico--dark"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>hola@danielatiradostudio.com</a></li>
-      <li><span class="ico ico--pink"><svg viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></span>Cali, Colombia</li>
-    </ul>
-  </div>
-
-  <form class="form reveal" name="contacto" method="POST" action="/gracias.html" data-netlify="true" netlify-honeypot="bot-field">
-    <input type="hidden" name="form-name" value="contacto">
-    <p class="hidden"><label>No llenar: <input name="bot-field"></label></p>
-    <p class="mono accent">&lt;form&gt; cuéntanos de tu proyecto</p>
-    <div class="form__grid">
-      <label>Nombre<input name="nombre" type="text" required placeholder="Tu nombre" autocomplete="name"></label>
-      <label>Correo<input name="email" type="email" required placeholder="tu@marca.com" autocomplete="email"></label>
-      <label>WhatsApp<input name="whatsapp" type="tel" placeholder="+57 300 000 0000" autocomplete="tel"></label>
-      <label>Servicio
-        <select name="servicio">
-          <option>Tienda Shopify</option><option>Sitio WordPress</option><option>Landing page</option>
-          <option>SEO / optimización</option><option>Automatizaciones</option><option>Marketing digital</option><option>Otro</option>
-        </select>
-      </label>
+<section id="contacto" class="section">
+  <div class="container contact">
+    <div class="contact__info">
+      <p class="marker reveal"><b>[05]</b><span>contacto</span></p>
+      <h2 class="reveal">¿Lista tu marca para su <strong>próximo click?</strong></h2>
+      <p class="lead reveal">Cuéntanos qué necesitas y te respondemos con una propuesta clara, sin tecnicismos.</p>
+      <ul class="contact__list reveal">
+        <li><a href="https://wa.me/573226258475" target="_blank" rel="noopener"><span class="ico"><svg class="icon icon--fill"><use href="#i-whatsapp"/></svg></span>+57 322 625 8475</a></li>
+        <li><a href="mailto:hola@danielatiradostudio.com"><span class="ico"><svg class="icon"><use href="#i-mail"/></svg></span>hola@danielatiradostudio.com</a></li>
+        <li><span class="ico"><svg class="icon"><use href="#i-pin"/></svg></span>Cali, Colombia</li>
+      </ul>
     </div>
-    <label>Mensaje<textarea name="mensaje" rows="4" required placeholder="Cuéntanos sobre tu marca y lo que necesitas"></textarea></label>
-    <button type="submit" class="btn btn--primary btn--block">Enviar mensaje →</button>
-    <p class="form__note">Te respondemos en menos de 24 horas hábiles.</p>
-  </form>
+
+    <form class="form reveal" id="contact-form" novalidate>
+      <p class="form__title">Cuéntanos de tu proyecto</p>
+      <div class="form__grid">
+        <div class="field"><label for="f-nombre">nombre</label><input class="input" id="f-nombre" name="nombre" type="text" required placeholder="Tu nombre" autocomplete="name"></div>
+        <div class="field"><label for="f-email">correo</label><input class="input" id="f-email" name="email" type="email" required placeholder="tu@marca.com" autocomplete="email"></div>
+        <div class="field"><label for="f-wa">whatsapp</label><input class="input" id="f-wa" name="whatsapp" type="tel" placeholder="+57 300 000 0000" autocomplete="tel"></div>
+        <div class="field"><label for="f-servicio">servicio</label>
+          <select class="input" id="f-servicio" name="servicio">
+            <option>Tienda Shopify</option><option>Sitio WordPress</option><option>Landing page</option>
+            <option>SEO / optimización</option><option>Automatizaciones</option><option>Marketing digital</option><option>Otro</option>
+          </select>
+        </div>
+      </div>
+      <div class="field"><label for="f-msg">mensaje</label><textarea class="input" id="f-msg" name="mensaje" rows="4" required placeholder="Cuéntanos sobre tu marca y lo que necesitas"></textarea></div>
+      <!-- Anti-spam: campo trampa que los humanos no ven -->
+      <input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off">
+      <button type="submit" class="btn btn--primary btn--block">Enviar mensaje <span class="arrow">→</span></button>
+      <div class="form__status" role="status" aria-live="polite"></div>
+      <p class="small" style="text-align:center">Te respondemos en menos de 24 horas hábiles.</p>
+    </form>
+  </div>
 </section>
 </main>
 
 <footer class="footer">
-  <div class="container footer__inner">
-    <img src="/assets/logo.svg" alt="Daniela Tirado Studio" width="100" height="40">
-    <span class="mono">Cali, Colombia · Shopify Partner</span>
-    <nav><a href="https://wa.me/573226258475" target="_blank" rel="noopener">WhatsApp</a><a href="mailto:hola@danielatiradostudio.com">Correo</a><a href="#">Instagram</a><a href="#">LinkedIn</a></nav>
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <img src="/assets/logo.svg" alt="Daniela Tirado Studio" width="110" height="44">
+        <p>Webs que se ven bien y venden mejor. Desarrollo en Shopify y WordPress desde Cali para Colombia, México, España y EE. UU.</p>
+      </div>
+      <div class="footer__col">
+        <h4>[ sitio ]</h4>
+        <a href="/#servicios">Servicios</a><a href="/portafolio.html">Portafolio</a><a href="/#estudio">Estudio</a><a href="/#contacto">Contacto</a>
+      </div>
+      <div class="footer__col">
+        <h4>[ hablemos ]</h4>
+        <a href="mailto:hola@danielatiradostudio.com">hola@danielatiradostudio.com</a>
+        <a href="https://wa.me/573226258475" target="_blank" rel="noopener">+57 322 625 8475</a>
+        <div class="footer__social">
+          <a href="https://wa.me/573226258475" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="icon icon--fill"><use href="#i-whatsapp"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg class="icon"><use href="#i-instagram"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg class="icon"><use href="#i-linkedin"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__copy"><span>© <span id="year">2026</span> Daniela Tirado Studio</span><span>Cali, Colombia · Shopify Partner</span></div>
   </div>
-  <p class="footer__copy container">© <span id="year">2026</span> Daniela Tirado Studio. Todos los derechos reservados.</p>
 </footer>
 
-<a class="wa-float" href="https://wa.me/573226258475" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.5A8.4 8.4 0 1 1 21 11.5z"/></svg></a>
+<a class="wa-float" href="https://wa.me/573226258475" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><svg class="icon icon--fill"><use href="#i-whatsapp"/></svg></a>
 
+<script src="/portfolio-data.js" defer></script>
 <script src="/main.js" defer></script>
 </body>
 </html>
