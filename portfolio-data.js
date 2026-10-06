@@ -54,5 +54,35 @@ window.PORTAFOLIO = [
     plataforma: "Shopify",
     descripcion: "Ecommerce de skincare y maquillaje coreano, con venta al detal y mayoreo.",
     destacado: false
+  },
+  {
+    nombre: "SBS Hotel",
+    url: "https://sbshotel.com/",
+    imagen: "",
+    pais: "Colombia",
+    categoria: "Turismo",
+    plataforma: "WordPress",
+    descripcion: "Sitio web para hotel, pensado para mostrar habitaciones y facilitar reservas.",
+    destacado: false
+  },
+  {
+    nombre: "Colombia No Frack",
+    url: "https://colombianofrack.org/",
+    imagen: "",
+    pais: "Colombia",
+    categoria: "Organizaciones",
+    plataforma: "WordPress",
+    descripcion: "Sitio de la alianza de más de 120 organizaciones que se oponen al fracking en Colombia.",
+    destacado: false
+  },
+  {
+    nombre: "Colombia con Igualdad",
+    url: "https://www.colombiaconigualdad.periferiaprensa.com/",
+    imagen: "",
+    pais: "Colombia",
+    categoria: "Organizaciones",
+    plataforma: "WordPress",
+    descripcion: "Proyecto de periodismo digital que documenta el legado del Ministerio de Igualdad y Equidad.",
+    destacado: false
   }
 ];

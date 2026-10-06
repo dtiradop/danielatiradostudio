@@ -37,7 +37,9 @@
   const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const card = (p, i) => `
     <a class="project reveal" style="--d:${(i % 2) * 0.1}s" href="${esc(p.url)}" target="_blank" rel="noopener">
-      <div class="project__img"><img src="${esc(p.imagen)}" alt="Sitio web de ${esc(p.nombre)}" loading="lazy" width="1200" height="750"></div>
+      <div class="project__img">${p.imagen
+        ? `<img src="${esc(p.imagen)}" alt="Sitio web de ${esc(p.nombre)}" loading="lazy" width="1200" height="750">`
+        : `<div class="project__ph"><span class="project__ph-glyph">&lt;/&gt;</span><span class="project__ph-name">${esc(p.nombre)}</span><span class="project__ph-url">${esc(p.url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, ''))}</span></div>`}</div>
       <div class="project__meta"><h3>${esc(p.nombre)}</h3><span class="tags"><span class="tag tag--brand">${esc(p.plataforma)}</span><span class="tag">${esc(p.pais)} · ${esc(p.categoria)}</span></span></div>
       <p>${esc(p.descripcion)}</p>
     </a>`;
