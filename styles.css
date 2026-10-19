@@ -318,6 +318,28 @@ select.input{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xml
   .skill,.certs{padding:var(--space-6)}
 }
 
+
+/* Enfoque 360° */
+.m360{display:grid;grid-template-columns:.8fr 1.2fr;gap:var(--space-12);align-items:start}
+.m360__intro{display:flex;flex-direction:column;gap:var(--space-4);position:sticky;top:120px}
+.m360__grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-4);counter-reset:m}
+.m360__item{background:var(--surface-soft);border-radius:var(--radius-md);padding:var(--space-6);display:flex;flex-direction:column;gap:var(--space-2);position:relative;overflow:hidden;transition:box-shadow .25s var(--ease),transform .25s var(--ease),background .25s}
+.m360__item:hover{box-shadow:var(--shadow-card);transform:translateY(-4px)}
+.m360__item:nth-child(4){background:var(--surface-inverse)}
+.m360__item:nth-child(4) h3{color:var(--blanco)}.m360__item:nth-child(4) p{color:var(--rosa)}.m360__item:nth-child(4) .m360__n{color:var(--rosa)}
+.m360__n{font:700 14px/20px var(--font-mono);color:var(--brand)}
+.m360__item h3{font-size:21px;line-height:26px}
+.m360__item p{color:var(--ink-muted);font-size:15px;line-height:24px}
+.tl__tags{list-style:none;margin:var(--space-2) 0 0;padding:0;display:flex;flex-wrap:wrap;gap:var(--space-2)}
+.tl__tags li{font:400 13px/18px var(--font-mono);background:var(--surface);color:var(--ink);padding:var(--space-1) var(--space-3);border-radius:var(--radius-sm)}
+.section--soft .tl__body{background:var(--surface)}
+.section--soft .tl__tags li{background:var(--surface-soft)}
+.section--soft .tl::before{background:var(--surface-soft)}
+.section--soft .tl--now::before{background:var(--brand)}
+.section--soft .timeline::before{background:var(--lavanda);opacity:.4}
+@media (max-width:1000px){.m360{grid-template-columns:1fr}.m360__intro{position:static}}
+@media (max-width:600px){.m360__grid{grid-template-columns:1fr}}
+
 /* ---------- Responsive ---------- */
 @media (max-width:1100px){
   .hero{grid-template-columns:1fr}
@@ -365,3 +387,4 @@ select.input{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xml
 .project:hover .project__ph-glyph{transform:translateX(-12px) rotate(-6deg)}
 .project__ph-name{position:relative;font:700 clamp(24px,2.4vw,34px)/1.1 var(--font-mono);letter-spacing:var(--tracking)}
 .project__ph-url{position:relative;font:400 14px/20px var(--font-mono);color:var(--rosa)}
+.cv-hero .display{font-size:clamp(38px,4.6vw,62px)}
