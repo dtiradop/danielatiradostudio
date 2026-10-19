@@ -5,6 +5,7 @@ Sitio estático (HTML + CSS + JS, sin dependencias ni build) listo para GitHub y
 ```
 index.html      Home (una sola página)
 portafolio.html Página de portafolio con filtros
+daniela.html    Página personal con la hoja de vida (PDFs en assets/cv/)
 portfolio-data.js  Lista de proyectos (aquí se agregan webs nuevas)
 styles.css      Estilos, animaciones y responsive
 main.js         Menú móvil, animaciones al hacer scroll, contadores, parallax
